@@ -1,0 +1,69 @@
+body{
+  height: 2000px;
+}
+/* Style the title element*/
+/* 1 */
+.accordion > div > span {
+  background-color: #e1dfdf;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 15px;
+  border-bottom: 1px solid #b4adad;
+}
+/* 2 */
+.accordion > div > span::after {
+  content: "\002b";
+  float: right;
+}
+/* 3 */
+.accordion > div.show > span::after {
+  content: "\2212";
+  float: right;
+}
+/* .accordion > div > span:hover {
+  background-color: #d0cccc;
+}
+.accordion div.show > span {
+  background-color: #d0cccc;
+} */
+/* 4,5 */
+.accordion > div span:hover,
+.accordion > div.show span {
+  background-color: #d0cccc;
+}
+/* 6 */
+.accordion > div:first-child span {
+  border-radius: 10px 10px 0 0;
+}
+/* 7 */
+.accordion > div:last-child span {
+  border-radius: 0 0 10px 10px;
+  border-bottom: 0;
+}
+/* 8 */
+.accordion > div.show:last-child span {
+  border-radius: 0;
+}
+/* Style the content element */
+/* 1 */
+.accordion > div > div {
+  border-left: 1px solid #e1dfdf;
+  border-right: 1px solid #e1dfdf;
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  padding: 0 15px;
+}
+/* 2 */
+.accordion > div.show > div {
+  /* display: block; */
+  /* max-height: 1000px; */
+  padding: 15px;
+}
+/* 3 */
+.accordion > div.show:last-child div {
+  border: 1px solid #e1dfdf;
+  border-radius: 0 0 10px 10px;
+}
